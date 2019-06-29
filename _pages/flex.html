@@ -1,0 +1,88 @@
+---
+key: 1
+title: Publications
+permalink: /publications/
+excerpt: 
+image: hvm123.jpg
+background-image: hvm123.jpg
+---
+{%  
+if site.social.linkedin-square %}
+
+
+   <center><h3>Scientific Publications</h3></center>
+
+<ul type="circle">
+    <li> Macrophage microRNA-150 promotes pathological angiogenesis as seen in age-related macular degeneration. JCI Insight, vol. 3 (7), April 5, 2018.
+     <ul>
+      <li>Lin JB, <strong>Moolani HV,</strong> Sene A, Sidhu R, Kell P, Lin JB, Dong Z, Ban N, Ory DS, Apte RS. </li>
+     </ul>
+    </li>
+
+    <li> Development of Dihydrochalcone Functionalized Gold Nanoparticles for Augmented Antineoplastic Activity. International Journal of Nanomedicine. 2018 March 28; 2018:13; 1917—1926
+     <ul>
+      <li>Payne J., Badwaik V., Waghwani H.,<b> Moolani H.,</b> Tockstein S., Thompson D., and Dakshinamurthy R. </li>
+     </ul>
+    </li>
+
+    <li> WNT7A/B promote choroidial neovascularization. Experimental Eye Research, 2018 June 174.
+     <ul>
+      <li>Lin JB, Sene A, Wiley L, Santeford A, Nudleman E, Nakamura R, Lin JB, <b> Moolani H, </b> Apte RS. </li>
+     </ul>
+    </li>
+
+    <li> Novel Synthesis of Kanamycin Conjugated Gold Nanoparticles with Potent Antibacterial Activity. Front Microbiol 2016 May 2; 7:607.
+     <ul>
+      <li>Waghwani H., Payne J., Conner M., Hamilton W., Tockstein S., <b> Moolani H., </b> Chavada F., Badwaik V., Lawrenz M., and Dakshinamurthy R. </li>
+     </ul>
+    </li>
+</ul>
+
+<form> <center><input type="button" value="Read Now" onclick="window.location.href='https://www.ncbi.nlm.nih.gov/pubmed/?term=harsh+moolani'"/></center> </form>
+
+<br>
+<br>
+
+  <center><h3>ELderly Care Videos</h3></center>
+
+<iframe width="500" height="400" src="https://www.youtube.com/watch?v=bvPvmsOkrmw&feature=youtu.be">
+</iframe>
+
+<hr>
+
+ <form>
+<center><input type="button" value="Check Out My LinkedIn" onclick="window.location.href='https://www.linkedin.com/in/harshmoolani/'"/></center>
+</form>
+
+
+
+
+
+</div>
+
+{%
+endif %}
+{%
+if site.categories.works %}
+<div class="table-wrapper">
+  <table>
+    <tbody>{%
+      include fn_groupsort_reverse.html unsorted=site.categories.works groupby='priority' sortby='date'
+%}{%  for work in sorted_list %}
+      <tr>
+        <td><b><a href="{{ work.url | prepend: site.baseurl }}">{{ work.title }}</a></b></td>
+        <td>{{ work.date | date: "%b %Y" }}</td>
+        <td>{{ work.excerpt | strip_html | truncatewords: 12 }}</td>
+        <td>
+          {% include techlist.html %}
+        </td>
+      </tr>{%
+      endfor %}
+    </tbody>
+  </table>
+</div>{%
+  if site.works_in_progress %}
+  <div class="works_inprogress">In-progress, more to come.</div>{%
+  endif %}{%
+endif
+%}
