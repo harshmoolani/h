@@ -29,14 +29,9 @@ lang: en-us # used in HTML lang attributes
 # - set the greeting only if you want to display the first green section
 greeting:
   title: Welcome! 
-  text: |-
-   My name is Harsh.
-
-   I’m absolutely fascinated by elderly care, gaps in high education and working with underserved populations.
-
-   I love playing all sports, making videos, and advising students.
-
-   Please let me know if I can do anything for you.
+  text: My name is Harsh. I am a current senior at Washington University in St. Louis studying Neuroscience and South Asian Studies. I’m absolutely fascinated by elderly care, gaps in high education and working with underserved populations.
+These passions have lead to starting businesses, creating videos on challanges that older adults face, and engaging with various parts of the St. Louis community. I am passionate about writing, initiating change, and helping the individuals closest to me. 
+Learn more about what I do and how I can help you. Thank you for looking at my website!
 
 # - displayed at the bottom
 closing-head: Thank you for visiting!
